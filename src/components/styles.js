@@ -602,24 +602,34 @@ export const PdpRemoveButton = styled.button`
   position: absolute;
   left: 30em;
   top: 35px;
+  font-size: 1.4rem;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 
   @media only screen and (max-width: 59.6875em) {
-    left: 27em;
+    left: 12em;
     top: 50px;
   }
 
   @media only screen and (max-width: 40.5625em) {
-    left: 20em;
-    top: 35px;
-  }
-
-  @media only screen and (min-width: 59.75em) {
-    left: 45em;
-    top: 35px;
-  }
-
-  @media only screen and (max-width: 23.75em) {
     left: 15em;
+    top: 35px;
+  }
+
+  @media only screen and (min-width: 70.625em) {
+    left: 26em;
+    top: 35px;
+  }
+
+  @media only screen and (max-width: 37.5em) {
+    left: 15em;
+    top: 35px;
+  }
+
+  @media only screen and (max-width: 23.5em) {
+    left: 10em;
     top: 35px;
   }
 `;

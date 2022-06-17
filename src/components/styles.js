@@ -50,11 +50,17 @@ export const NavbarItemWrapper = styled.nav`
 `;
 
 export const ResponsiveFilter = styled.div`
+  display: none;
+
+  @media only screen and (max-width: 67.5em) {
+    display: ${(props) => (props.clicked ? "flex" : "none")};
+  }
+
   position: absolute;
   top: 100%;
   left: 0;
   right: 0;
-  display: flex;
+
   align-items: center;
   justify-content: center;
   background: rgba(53, 53, 63, 0.95);
@@ -62,7 +68,7 @@ export const ResponsiveFilter = styled.div`
   line-height: 2.5;
   margin: 0 2em;
   border-radius: 2em;
-  opacity: ${(props) => (props.clicked ? 1 : 0)};
+  // opacity: ${(props) => (props.clicked ? 1 : 0)};
 `;
 
 export const Currency = styled.div`
@@ -327,6 +333,7 @@ export const CartPageItemRemoveButton = styled.button`
   position: absolute;
   left: 40em;
   top: 35px;
+  cursor: pointer;
 
   @media only screen and (max-width: 44.6875em) {
     left: 20em;
@@ -356,6 +363,16 @@ export const CartPageItemButton = styled.button`
   font-weight: 600;
   background: #a9d9d0;
   border-radius: 5px;
+  cursor: pointer;
+
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
 `;
 
 export const CartItemQtyContainer = styled.div``;
@@ -625,4 +642,14 @@ export const CheckCartButton = styled.button`
   font-size: 1.1rem;
   background: #a9d9d0;
   border-radius: 5px;
+
+  transition: transform 0.2s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:hover {
+    transform: scale(0.9);
+  }
 `;

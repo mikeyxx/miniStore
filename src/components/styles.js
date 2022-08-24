@@ -520,6 +520,12 @@ export const ClearFilterButton = styled.button`
   border-radius: 5px;
   border: 0;
   cursor: pointer;
+
+  a {
+    color: inherit;
+    width: 100%;
+    display: block;
+  }
 `;
 
 export const RatingFilter = styled.span`

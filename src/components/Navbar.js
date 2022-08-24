@@ -214,9 +214,9 @@ function Navbar() {
             </ClearFilterButton>
             <br />
             {(selectedProducts.length < 1 || cart.length < 1) && (
-              <Link to="/">
-                <ClearFilterButton>Go Home</ClearFilterButton>
-              </Link>
+              <ClearFilterButton>
+                <Link to="/">Go Home</Link>
+              </ClearFilterButton>
             )}
           </div>
         </ResponsiveFilter>

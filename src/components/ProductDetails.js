@@ -13,6 +13,7 @@ import {
 } from "../components/styles";
 import { Link } from "react-router-dom";
 import Ratings from "./Ratings";
+import { FaShoppingCart } from "react-icons/fa";
 
 function ProductDetails({ item }) {
   const dispatch = useDispatch();
@@ -34,13 +35,14 @@ function ProductDetails({ item }) {
   }
 
   const price = itemPrice(currencySymbol);
+  // console.log(item);
 
   return (
     <ProductContainer>
       <Link to="/pdp">
         <ProductWrapper onClick={() => dispatch(addItemToPdp(item))}>
           <Image src={item.img} alt={item.name} />
-          <ProductBody>
+          <ProductBody tabIndex="1">
             <ProductName>{item.name}</ProductName>
             <ProductSubtitle>
               <ProductPrice>
@@ -56,6 +58,9 @@ function ProductDetails({ item }) {
               </RatingContainer>
             </ProductSubtitle>
           </ProductBody>
+          <div className="cartHomeIconContainer">
+            <FaShoppingCart className="cartHomeIcon" />
+          </div>
         </ProductWrapper>
       </Link>
     </ProductContainer>

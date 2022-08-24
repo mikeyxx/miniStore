@@ -8,8 +8,8 @@ import Cart from "./pages/Cart";
 function App() {
   return (
     <Router>
-      <Navbar />
       <div className="App">
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/pdp" element={<Pdp />} />

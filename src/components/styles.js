@@ -392,14 +392,37 @@ export const ProductContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+
   &:hover {
     background: white;
+    border-radius: 10px;
+
+    .cartHomeIconContainer {
+      display: block;
+    }
   }
 
   a {
     text-decoration: none;
     color: inherit;
     font-weight: 600;
+  }
+
+  .cartHomeIconContainer {
+    display: none;
+  }
+
+  @media only screen and (max-width: 68em) {
+    padding: 2em;
+  }
+
+  @media only screen and (max-width: 47.5em) {
+    padding: 2em;
+  }
+
+  @media only screen and (max-width: 41.25em) {
+    padding: 2em;
   }
 `;
 

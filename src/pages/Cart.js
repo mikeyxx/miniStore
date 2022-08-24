@@ -26,11 +26,14 @@ import {
 
 function Cart() {
   const cart = useSelector((state) => state.products.cart);
-  // console.log(cart);
   const dispatch = useDispatch();
   const currencySymbol = useSelector((state) => state.products.currencySymbol);
 
-  const [total, setTotal] = useState();
+  useEffect(() => {
+    localStorage.setItem("currency", JSON.stringify(currencySymbol));
+  }, [currencySymbol]);
+
+  const [total, setTotal] = useState(JSON.parse(localStorage.getItem("total")));
 
   useEffect(() => {
     setTotal(
@@ -40,6 +43,14 @@ function Cart() {
       )
     );
   }, [cart]);
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
+
+  useEffect(() => {
+    localStorage.setItem("total", JSON.stringify(total));
+  }, [total]);
 
   function itemPrice(p) {
     let price = 1;
@@ -58,6 +69,9 @@ function Cart() {
 
   return (
     <CartPageContainer>
+      {cart.length < 1 && (
+        <h1 style={{ padding: "5em" }}>Your cart is empty</h1>
+      )}
       <CartPageWrapper>
         {cart.map((item) => (
           <CartPageItem key={item.id}>

@@ -48,24 +48,41 @@ import {
   filterByRating,
   clearFilters,
 } from "../features/products/productFilterSlice";
+import { TiArrowBack } from "react-icons/ti";
+import { useEffect } from "react";
+import { useCallback } from "react";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [click, setClick] = useState(false);
+  const selectedProducts = useSelector((state) => state.products.pdp);
+
   const cart = useSelector((state) => state.products.cart);
   const currency = useSelector((state) => state.products.currency);
   const dispatch = useDispatch();
   const logger = (event) => {
     dispatch(chooseCurrency(event.target.value));
   };
-  const handleClick = () => setClick(!click);
+
+  const handleClick = useCallback(() => {
+    setClick((prev) => !prev);
+  }, []);
+
   const { byStock, byFastDelivery, sort, byRating } = useSelector(
     (state) => state.productFilters
   );
 
-  const currencySymbols = currency.map((c, index) => (
+  // useEffect(() => {
+  //   localStorage.setItem("currency", JSON.stringify(currency));
+  // }, [currency]);
+
+  const currencySymbols = currency?.map((c, index) => (
     <Option key={index}>{c.symbol}</Option>
   ));
+
+  const hamburgerToggle = () => {
+    setIsOpen((prev) => !prev);
+  };
 
   return (
     <NavbarContainer>
@@ -74,7 +91,9 @@ function Navbar() {
           <HamburgerBtn onClick={handleClick} clicked={click}>
             <span />
           </HamburgerBtn>
-          <Link to="/">Shopping Cart</Link>
+          <Link to="/">
+            Shopping Cart <TiArrowBack style={{ fontSize: "1.7rem" }} />
+          </Link>
         </Left>
         <Center>
           <Input
@@ -89,7 +108,7 @@ function Navbar() {
               {currencySymbols}
             </Select>
           </Currency>
-          <CartElement onClick={() => setIsOpen(!isOpen)}>
+          <CartElement onClick={hamburgerToggle}>
             <CartIconWrap>
               <FiIcons.FiShoppingCart />
             </CartIconWrap>
@@ -193,6 +212,12 @@ function Navbar() {
             <ClearFilterButton onClick={() => dispatch(clearFilters())}>
               Clear Filters
             </ClearFilterButton>
+            <br />
+            {(selectedProducts.length < 1 || cart.length < 1) && (
+              <Link to="/">
+                <ClearFilterButton>Go Home</ClearFilterButton>
+              </Link>
+            )}
           </div>
         </ResponsiveFilter>
       </NavbarItemWrapper>

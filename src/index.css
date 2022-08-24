@@ -1,13 +1,53 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.App {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.productInfoContainer {
+  padding-top: 10em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.productInfoContainer .cProducts {
+  font-family: "Open sans", sans-serif;
+  font-size: 17.6px;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-top: 5em;
+  padding: 10px;
+  border: 2px solid;
+  background-color: rgb(169, 217, 208);
+  cursor: pointer;
+}
+
+.productInfoContainer .cProducts a {
+  color: #000;
+}
+
+.cartHomeIconContainer {
+  position: absolute;
+  bottom: 7em;
+  right: 2em;
+}
+
+.cartHomeIcon {
+  font-size: 4em;
+  color: rgb(7, 140, 102);
 }

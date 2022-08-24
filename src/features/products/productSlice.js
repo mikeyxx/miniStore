@@ -5,17 +5,23 @@ import { currency } from "../../data";
 const initialState = {
   products: products,
   currency: currency,
-  currencySymbol: "",
+  currencySymbol: JSON.parse(localStorage.getItem("currency")) || "",
   pdp: [],
-  cart: [],
+  cart: JSON.parse(localStorage.getItem("cart")) || [],
 };
+
+// console.log(initialState.cart);
 
 const productSlice = createSlice({
   name: "products",
   initialState,
   reducers: {
     addItemToPdp: (state, action) => {
-      state.pdp.push(action.payload);
+      if (state.pdp.some((p) => p.id === action.payload.id)) {
+        return;
+      } else {
+        state.pdp.push(action.payload);
+      }
     },
     removeItemFromPdp: (state, action) => {
       state.pdp = state.pdp.filter((p) => p.id !== action.payload.id);

@@ -11,7 +11,11 @@ function Ratings({ rating, onClick }) {
           onClick={() => onClick(index)}
           style={{ cursor: "pointer" }}
         >
-          {rating > index ? <AiIcons.AiFillStar /> : <AiIcons.AiOutlineStar />}
+          {rating > index ? (
+            <AiIcons.AiFillStar style={{ color: "orange" }} />
+          ) : (
+            <AiIcons.AiOutlineStar />
+          )}
         </Wrapper>
       ))}
     </>

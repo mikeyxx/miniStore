@@ -92,7 +92,7 @@ function Navbar() {
             <span />
           </HamburgerBtn>
           <Link to="/">
-            Shopping Cart <TiArrowBack style={{ fontSize: "1.7rem" }} />
+            Shopping Cart
           </Link>
         </Left>
         <Center>

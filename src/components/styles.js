@@ -9,6 +9,7 @@ export const HomeProductContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin: 7em 2em 1.8em 22em;
+  gap: 1em;
   align-item: center;
   justify-content: center;
 

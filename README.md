@@ -1,8 +1,20 @@
-# Getting Started with Create React App and Redux
+# Title
+**Mini Store App**
 
-## About
+##Overview
 
 The ministore app is an ecommerce store where you can search and add your favourite items into your shopping cart.
+
+##Features
+
+I did not make use of an api to build this app, I created a set of dummy data which is displayed on the homepage once the app is launched. On the homepage, I added filter functionalities so that the user can filter for any product category they want to see. I also added a search bar to the application so that the user can search for any product they want. I added a currency switcher on the navbar so that a user can choose the preferred currency they wish to see the products displayed in. I added a cart item count feature on the navbar so the user can see the number of products they have added to their cart. When you hover on a product and click on it, the user is taken to a product description page(PDP), where they get a brief description of the product they wish to add to their cart. They can then decide to add such product to their cart or remove it (if they have already added it) or just go back to the homepage using the "Go Home" button.
+
+## Running the project
+
+- Clone the repo by clicking the code button and downloading a zip file. 
+- cd into the project directory in your command line or bash
+- run npm install to add dependencies in your command line or bash
+- run npm start in your command line or bash to start the project in your local browser
 
 ## Dependencies
 
@@ -20,30 +32,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ## Learn More
 

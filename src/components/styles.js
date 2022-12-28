@@ -293,6 +293,7 @@ export const CartDropdownButton = styled.button`
 
 export const CartPageContainer = styled.div`
   width: 100vw;
+  position: relative;
 `;
 export const CartPageWrapper = styled.div`
   padding-top: calc(10em - 80px);
@@ -304,7 +305,7 @@ export const CartPageWrapper = styled.div`
 
   @media only screen and (max-width: 39.4375em) {
     width: 70vw;
-    padding-top: 8em;
+    padding-top: 10em;
   }
 `;
 export const CartPageItem = styled.div`
@@ -333,24 +334,9 @@ export const CartPageItemRemoveButton = styled.button`
   background-color: transparent;
   border: 0;
   position: absolute;
-  left: 40em;
-  top: 35px;
+  right: 1em;
+  top: 1em;
   cursor: pointer;
-
-  @media only screen and (max-width: 44.6875em) {
-    left: 20em;
-    top: 35px;
-  }
-
-  @media only screen and (max-width: 64.75em) {
-    left: 25em;
-    top: 35px;
-  }
-
-  @media only screen and (max-width: 23.75em) {
-    left: 15em;
-    top: 35px;
-  }
 `;
 export const CartPageItemSummary = styled.div`
   line-height: 2;

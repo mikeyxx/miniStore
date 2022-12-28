@@ -7,7 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { chooseCurrency } from "../features/products/productSlice";
 import { filterBySearch } from "../features/products/productFilterSlice";
 import Ratings from "./Ratings";
-import {MdEmail} from 'react-icons/md'
+import {BsGithub} from 'react-icons/bs'
 import {IoLogoTwitter} from 'react-icons/io'
 import {
   NavbarContainer,
@@ -52,7 +52,6 @@ import {
   filterByRating,
   clearFilters,
 } from "../features/products/productFilterSlice";
-import { TiArrowBack } from "react-icons/ti";
 import { useCallback } from "react";
 
 function Navbar() {
@@ -226,7 +225,7 @@ function Navbar() {
                 <h3>Socials</h3>
                 <SocialIconsWrapper>
                   <a href="https://twitter.com/topboy_mikey" target='_blank'><IoLogoTwitter className="twitterLogo socials" /></a>
-                  <a href="mailto:michaelogboo@gmail.com" target='_blank'> <MdEmail className="socials"/></a>
+                  <a href="https://github.com/mikeyxx" target='_blank'> <BsGithub className="socials"/></a>
                 </SocialIconsWrapper>
             </SocialIconsContainer>
           </div>

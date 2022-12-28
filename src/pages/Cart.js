@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import * as AiIcons from "react-icons/ai";
+import { Link } from "react-router-dom";
 import {
   incrementCartItemQty,
   decrementCartItemQty,
@@ -22,6 +23,7 @@ import {
   CartItemDecrementBtn,
   CartItemQty,
   CartItemIncrementBtn,
+  GoHomeButton
 } from "../components/styles";
 
 function Cart() {
@@ -119,6 +121,9 @@ function Cart() {
           </CartPageItemButton>
         </CartPageItemSummary>
       </CartPageWrapper>
+      <GoHomeButton>
+        <Link to="/pdp">Go Back</Link>
+      </GoHomeButton>
     </CartPageContainer>
   );
 }

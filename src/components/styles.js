@@ -630,27 +630,12 @@ export const PdpRemoveButton = styled.button`
   font-weight: 700;
   color: red;
   position: absolute;
-  left: 30em;
-  top: 35px;
+  left: 1em;
+  top: 1em;
   font-size: 1.4rem;
 
   &:hover {
     transform: scale(1.1);
-  }
-
-  @media only screen and (max-width: 59.6875em) {
-    left: 12em;
-    top: 50px;
-  }
-
-  @media only screen and (max-width: 40.5625em) {
-    left: 15em;
-    top: 35px;
-  }
-
-  @media only screen and (min-width: 70.625em) {
-    left: 26em;
-    top: 35px;
   }
 
   @media only screen and (max-width: 37.5em) {

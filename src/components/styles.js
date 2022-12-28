@@ -482,6 +482,17 @@ export const FilterTitle = styled.span`
   font-size: 30px;
 `;
 
+export const SocialIconsContainer = styled.div`
+  padding-top: 2em;
+`
+
+export const SocialIconsWrapper = styled.div`
+  padding-top: 1em;
+  a {
+    color: white
+  }
+`
+
 export const AscendingFilter = styled.span`
   cursor: pointer;
 `;

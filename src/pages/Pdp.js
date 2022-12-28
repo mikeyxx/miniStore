@@ -17,6 +17,7 @@ import {
   PdpItemRating,
   PdpDesc,
   CheckCartButton,
+  GoHomeButton
 } from "../components/styles";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -101,6 +102,9 @@ function Pdp() {
           <Link to="/cart">
             <CheckCartButton>Check Cart</CheckCartButton>
           </Link>
+          <GoHomeButton>
+            <Link to="/">Go Home</Link>
+          </GoHomeButton>
         </>
       )}
     </PdpContainer>

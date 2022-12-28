@@ -1,11 +1,11 @@
 # Title
 **Mini Store App**
 
-##Overview
+## Overview
 
 The ministore app is an ecommerce store where you can search and add your favourite items into your shopping cart.
 
-##Features
+## Features
 
 I did not make use of an api to build this app, I created a set of dummy data which is displayed on the homepage once the app is launched. On the homepage, I added filter functionalities so that the user can filter for any product category they want to see. I also added a search bar to the application so that the user can search for any product they want. I added a currency switcher on the navbar so that a user can choose the preferred currency they wish to see the products displayed in. I added a cart item count feature on the navbar so the user can see the number of products they have added to their cart. When you hover on a product and click on it, the user is taken to a product description page(PDP), where they get a brief description of the product they wish to add to their cart. They can then decide to add such product to their cart or remove it (if they have already added it) or just go back to the homepage using the "Go Home" button.
 

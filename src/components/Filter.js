@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Ratings from "./Ratings";
-import {BsGithub} from 'react-icons/md'
+import {BsGithub} from 'react-icons/bs'
 import {IoLogoTwitter} from 'react-icons/io'
 import {
   FilterContainer,

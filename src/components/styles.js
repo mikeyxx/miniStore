@@ -630,7 +630,7 @@ export const PdpRemoveButton = styled.button`
   font-weight: 700;
   color: red;
   position: absolute;
-  left: 1em;
+  right: 1em;
   top: 1em;
   font-size: 1.4rem;
 

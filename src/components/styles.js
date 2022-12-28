@@ -41,6 +41,7 @@ export const NavbarItemWrapper = styled.nav`
   position: relative;
   width: 100%;
 
+
   @media only screen and (max-width: 67.5em) {
     padding: 1rem 2rem;
   }
@@ -430,6 +431,7 @@ export const ProductContainer = styled.div`
 export const ProductWrapper = styled.div`
   padding: 1em;
   border-radius: 5px;
+  // gap: 2em
 
   &:hover {
     background: white;
@@ -540,6 +542,7 @@ export const RatingFilter = styled.span`
 
 export const PdpContainer = styled.div`
   width: 100vw;
+  position: relative;
 
   a {
     text-decoration: none;
@@ -552,12 +555,18 @@ export const PdpWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   width: 50vw;
-  margin: 0 auto;
+  margin: 0 auto; 
+
 
   @media only screen and (max-width: 39.4375em) {
     width: 70vw;
-    padding-top: 8em;
+    padding-top: 10em;
+
   }
+
+  // @media only screen and (max-width: 37.5em) {
+  //   padding-top: 5em;
+  // }
 `;
 
 export const PdpItems = styled.div`
@@ -569,6 +578,7 @@ export const PdpItems = styled.div`
   font-size: 1.2rem;
   position: relative;
   z-index: 1;
+
 
   &:first-of-type {
     margin-top: 1em;
@@ -633,20 +643,13 @@ export const PdpRemoveButton = styled.button`
   right: 1em;
   top: 1em;
   font-size: 1.4rem;
+  z-index: 3;
+ 
 
   &:hover {
     transform: scale(1.1);
   }
 
-  @media only screen and (max-width: 37.5em) {
-    left: 15em;
-    top: 35px;
-  }
-
-  @media only screen and (max-width: 23.5em) {
-    left: 10em;
-    top: 35px;
-  }
 `;
 
 export const PdpItemPrice = styled.span`
@@ -677,4 +680,27 @@ export const CheckCartButton = styled.button`
   &:hover {
     transform: scale(0.9);
   }
+`;
+
+export const GoHomeButton = styled.button`
+  min-width: 10vw;
+  display: block;
+  margin: 2em auto;
+  padding: 1em;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: transparent;
+  border: none;
+  // border-radius: 5px;
+  position: absolute;
+  right: 2em;
+  top: 5em;
+
+  a {
+    &:visited {
+      color: black;
+    }
+  }
+  
 `;

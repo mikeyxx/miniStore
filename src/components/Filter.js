@@ -1,6 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Ratings from "./Ratings";
+import {MdEmail} from 'react-icons/md'
+import {IoLogoTwitter} from 'react-icons/io'
 import {
   FilterContainer,
   FilterTitle,
@@ -13,6 +15,8 @@ import {
   ClearFilterButton,
   RatingFilter,
   FilterWrapper,
+  SocialIconsContainer,
+  SocialIconsWrapper
 } from "../components/styles";
 import {
   filterByStock,
@@ -91,6 +95,13 @@ function Filter() {
         <ClearFilterButton onClick={() => dispatch(clearFilters())}>
           Clear Filters
         </ClearFilterButton>
+        <SocialIconsContainer>
+          <h3>Socials</h3>
+          <SocialIconsWrapper>
+            <a href="https://twitter.com/topboy_mikey"><IoLogoTwitter className="twitterLogo socials" /></a>
+            <a href="mailto:michaelogboo@gmail.com"> <MdEmail className="socials"/></a>
+          </SocialIconsWrapper>
+        </SocialIconsContainer>
       </FilterWrapper>
     </FilterContainer>
   );

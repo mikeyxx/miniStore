@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Ratings from "./Ratings";
-import {MdEmail} from 'react-icons/md'
+import {BsGithub} from 'react-icons/md'
 import {IoLogoTwitter} from 'react-icons/io'
 import {
   FilterContainer,
@@ -99,7 +99,7 @@ function Filter() {
           <h3>Socials</h3>
           <SocialIconsWrapper>
             <a href="https://twitter.com/topboy_mikey"><IoLogoTwitter className="twitterLogo socials" /></a>
-            <a href="mailto:michaelogboo@gmail.com"> <MdEmail className="socials"/></a>
+            <a href="https://github.com/mikeyxx" target='_blank'> <BsGithub className="socials"/></a>
           </SocialIconsWrapper>
         </SocialIconsContainer>
       </FilterWrapper>
